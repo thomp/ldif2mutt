@@ -1,6 +1,6 @@
 # ldif2mutt
 
-Extract address data from an LDIF file and generate alias commands suitable for mutt.
+Extract address data from an LDIF file and generate alias commands suitable for the [mutt](http://www.mutt.org) email client.
 
 ## Use
 
