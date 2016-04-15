@@ -63,11 +63,18 @@ def ldif2mutt(ldif_file_spec):
             mail_only_p = True
         if mail_only_p:
             nick = disp_name.replace(" ", "")
+            nick = downcase_char(nick,0);
             print('alias {} {}'.format(nick, mail))
         else:
             nick = disp_name.replace(" ", "")
+            nick = downcase_char(nick,0); 
             # use quoted string and angle address (RFC 5322) for email
             print('alias {} "{}" <{}>'.format(nick, disp_name, mail))
+
+
+def downcase_char(s,n):
+    """Make character at position N downpercase."""
+    return s[:n] + s[n].lower() + s[n+1:]
 
 
 def main():
