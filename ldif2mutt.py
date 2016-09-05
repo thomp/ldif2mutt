@@ -78,7 +78,7 @@ def downcase_char(s,n):
 
 
 def main():
-    """Handle command-line invocation of busca.py. Expect all arguments to be filenames for PDF files."""
+    """Handle command-line invocation of ldif2mutt.py. Expect all command-line arguments to be filenames corresponding to LDIF files."""
     parser = argparse.ArgumentParser(description="This is ldif2mutt.py") 
     parser.add_argument("input_files", help="one or more input (LDIF) files", nargs="+", type=str)
     args = parser.parse_args()
